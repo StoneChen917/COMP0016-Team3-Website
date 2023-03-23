@@ -1,189 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Testing</title>
-
+ 
     <link rel="stylesheet" href="assets/css/Global.css">
     <link rel="stylesheet" href="assets/css/Header.css">
     <link rel="stylesheet" href="assets/css/Footer.css">
-
+ 
     <link rel="stylesheet" href="assets/css/pages/index.css">
+ 
 
+    <style>
+        /* .image-bundle {
+            display: grid;
+            align-items: center; 
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 5px;
+        }
+        
+        .img {
+            max-width: 50%;
+            max-height: 50%;
+        } */
+ 
+        .image-bundle {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
+ 
+        .image-bundle img {
+            width: 20%;
+        }
+ 
+        @media (max-width: 768px) {
+            .image-bundle img {
+                width: 50%;
+            }
+        }
+        
+        /* .text {
+            font-size: 70px;
+        } */
+    
+        /* .mycode{
+        display: block; 
+        padding: 3px 3px 2px; 
+        font-size: 14px; 
+        line-height: 20px;
+        width: 100%;
+        background-color: #333;
+        font-family: arial;
+        color: #f7f7f7;
+        font-weight: bold;
+    } */
+    </style>
 </head>
-
+ 
 <body>
     <header>
-        <!-- ***** Logo Start ***** -->
-        <!-- <a href="index.html" class="logo">
-            <img src="assets/images/go-logo-2020.png" alt="IFRC-GO">
-        </a> -->
-        <!-- ***** Logo End ***** -->
-        <!-- ***** Menu Start ***** -->
-        <!-- <ul class="menu" id="menu">
-            <li class="submenu">
-                <a class="mainlink" href="index.html">Home</a>
-            </li>
-            <li class="submenu">
-                <a class="mainlink" href="requirements.html">Requirements</a>
-            </li>
-
-            <li class="submenu" class="submenu">
-                <a class="mainlink" href="research.html">Research</a>
-            </li>
-            <li class="submenu" class="submenu">
-                <a class="mainlink" href="algorithms.html">Algorithms</a>
-            </li>
-            <li class="submenu" class="submenu">
-                <a class="mainlink" href="design.html">Design</a>
-            </li>
-            <li class="submenu" class="submenu">
-                <a class="mainlink" href="system_design.html">System Design</a>
-            </li>
-            <li class="submenu" class="submenu">
-                <a class="mainlink" href="implementatio.html">Implementation</a>
-            </li>
-            <li class="submenu" class="submenu">
-                <a class="mainlink" href="testing.html">Testing</a>
-            </li>
-            <li class="submenu" class="submenu">
-                <a class="mainlink" href="evaluation.html">Evaluation</a>
-            </li>
-            <li class="submenu" class="submenu">
-                <a class="mainlink" href="appendix.html">Appendix</a>
-            </li>
-        </ul>
-        <a class='menu-mobile'>
-            <span>Menu</span>
-        </a> -->
-        <!-- ***** Menu Start ***** -->
-    </header>
-
-    <div class="navbar">
-        <div class="dropdown">
-            <button class="dropbtn" onclick="window.location.href = 'index.html';">Home 
-            <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-            <a href="index.html#abstracts">Abstracts</a>
-            <a href="index.html#features">Features</a>
-            <a href="index.html#team-members">Team Members</a>
-            <a href="index.html#gantt-chart">Gantt Chart</a>
+        <div class="navbar">
+            <div class="dropdown">
+                <button class="dropbtn" onclick="window.location.href = 'index.html';">Home 
+                <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                <a href="index.html#abstracts">Abstracts</a>
+                <a href="index.html#features">Features</a>
+                <a href="index.html#project-video">Project Video</a>
+                <a href="index.html#team-members">Team Members</a>
+                <a href="index.html#gantt-chart">Gantt Chart</a>
+                </div>
+            </div> 
+            <div class="dropdown">
+                <button class="dropbtn" onclick="window.location.href = 'requirements.html';">Requirements 
+                <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                <a href="requirements.html#pb">Project Background</a>
+                <a href="requirements.html#pg">Project Goals</a>
+                <a href="requirements.html#gor">Gathering of Requirements</a>
+                <a href="requirements.html#personas">Personas</a>
+                <a href="requirements.html#moscow">MoSCoW Requirements</a>
+                </div>
+            </div> 
+            <div class="dropdown">
+                <button class="dropbtn" onclick="window.location.href = 'research.html';">Research 
+                <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                <a href="research.html#Named-Entity-Recognition">Named Entity Recognition</a>
+                <a href="research.html#SpaCy">SpaCy</a>
+                <a href="research.html#Q&A-Model">Q&A Model</a>
+                <a href="research.html#Table-Extraction">Table Extraction</a>
+                <a href="research.html#String-Matching">String Matching</a>
+                <a href="research.html#Resources">Resources</a>
+                </div>
+            </div> 
+            <div class="dropdown">
+                <button class="dropbtn" onclick="window.location.href = 'design.html';">Design 
+                <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                <a href="design.html#UI-design">UI Design</a>
+                <a href="design.html#System-Architecture">System Architecture</a>
+                <a href="design.html#Site-Map">Site Map</a>
+                <a href="design.html#Data-Storage">Data Storage</a>
+                </div>
+            </div> 
+            <div class="dropdown">
+                <button class="dropbtn" onclick="window.location.href = 'implementation.html';">Implementation 
+                <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                <a href="implementation.html#Impl.Overview">Implementation Overview</a>
+                <a href="implementation.html#Retrieving-and-reading-file(s)">Retrieving and reading file(s)</a>
+                <a href="implementation.html#Answer-Extraction">Answer Etraction</a>
+                <a href="implementation.html#Location-extraction">Location Extraction</a>
+                <a href="implementation.html#Code-matching">Code Matching</a>
+                <a href="implementation.html#Display-and-save">Display and save</a>
+                </div>
+            </div> 
+            <div class="dropdown">
+                <button class="dropbtn" onclick="window.location.href = 'testing.html';">Testing 
+                <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                <a href="testing.html#Testing-Strategy">Testing Strategy</a>
+                <a href="testing.html#Unit-Testing">Unit Testing</a>
+                <a href="testing.html#Integration-Testing">Integration Testing</a>
+                <a href="testing.html#User-Testing">User Testing</a>
+                </div>
             </div>
-        </div> 
-        <div class="dropdown">
-            <button class="dropbtn" onclick="window.location.href = 'requirements.html';">Requirements 
-            <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-            <a href="requirements.html#pb">Project Background</a>
-            <a href="requirements.html#pg">Project Goals</a>
-            <a href="requirements.html#gor">Gathering of Requirements</a>
-            <a href="requirements.html#personas">Personas</a>
-            <a href="requirements.html#moscow">MoSCoW Requirements</a>
-            </div>
-        </div> 
-        <div class="dropdown">
-            <button class="dropbtn" onclick="window.location.href = 'research.html';">Research 
-            <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-            <a href="research.html#Named-Entity-Recognition">Named Entity Recognition</a>
-            <a href="research.html#SpaCy">SpaCy</a>
-            <a href="research.html#Q&A-Model">Q&A Model</a>
-            <a href="research.html#Table-Extraction">Table Extraction</a>
-            <a href="research.html#String-Matching">String Matching</a>
-            <a href="research.html#Resources">Resources</a>
-            </div>
-        </div> 
-        <div class="dropdown">
-            <button class="dropbtn" onclick="window.location.href = 'design.html';">Design 
-            <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-            <a href="design.html#UI-design">UI Design</a>
-            <a href="design.html#System-Architecture">System Architecture</a>
-            <a href="design.html#Site-Map">Site Map</a>
-            <a href="design.html#Data-Storage">Data Storage</a>
-            </div>
-        </div> 
-        <div class="dropdown">
-            <button class="dropbtn" onclick="window.location.href = 'implementation.html';">Implementation 
-            <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-            <a href="implementation.html#Impl.Overview">Implementation Overview</a>
-            <a href="implementation.html#Retrieving-and-reading-file(s)">Retrieving and reading file(s)</a>
-            <a href="implementation.html#Answer-Extraction">Answer Etraction</a>
-            <a href="implementation.html#Location-extraction">Location Extraction</a>
-            <a href="implementation.html#Code-matching">Code Matching</a>
-            <a href="implementation.html#Display-and-save">Display and save</a>
-            </div>
-        </div> 
-        <div class="dropdown">
-            <button class="dropbtn" onclick="window.location.href = 'testing.html';">Testing 
-            <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-            <a href="testing.html#Testing-Strategy">Testing Strategy</a>
-            <a href="testing.html#Unit-Testing">Unit Testing</a>
-            <a href="testing.html#Integration-Testing">Integration Testing</a>
-            <a href="testing.html#User-Testing">User Testing</a>
-            </div>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="window.location.href = 'evaluation.html';">Evaluation 
+                <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                <a href="evaluation.html#achievements">Achievements</a>
+                <a href="evaluation.html#QA">QA Models</a>
+                <a href="evaluation.html#spacy">spaCy Models</a>
+                <a href="evaluation.html#string">String Matching</a>
+                <a href="evaluation.html#critical">Critical Evaluation</a>
+                <a href="evaluation.html#future">Future Work</a>
+    
+    
+                </div>
+            </div> 
+            <div class="dropdown">
+                <button class="dropbtn" onclick="window.location.href = 'appendix.html';">Appendix 
+                <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                <a href="appendix.html#Deployment-Manual">Deployment Manual</a>
+                <a href="appendix.html#Monthly-Videos">Monthly Videos</a>
+                <a href="appendix.html#Development-Blog">Development Blog</a>
+                </div>
+            </div> 
         </div>
-        <div class="dropdown">
-            <button class="dropbtn" onclick="window.location.href = 'evaluation.html';">Evaluation 
-            <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-            <a href="evaluation.html#achievements">Achievements</a>
-            <a href="evaluation.html#QA">QA Models</a>
-            <a href="evaluation.html#spacy">spaCy Models</a>
-            <a href="evaluation.html#string">String Matching</a>
-            <a href="evaluation.html#critical">Critical Evaluation</a>
-            <a href="evaluation.html#future">Future Work</a>
-
-
-            </div>
-        </div> 
-        <div class="dropdown">
-            <button class="dropbtn" onclick="window.location.href = 'appendix.html';">Appendix 
-            <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-            <a href="appendix.html#Deployment-Manual">Deployment Manual</a>
-            <a href="appendix.html#Monthly-Videos">Monthly Videos</a>
-            <a href="appendix.html#Development-Blog">Development Blog</a>
-            </div>
-        </div> 
-    </div>
-
+    </header>
+    
+    <section class="section" id="Overview">
+        <div style="text-align: center;"><h3>Testing</h3></div>
+        <hr class="solid">
     <!-- the first re-usable section with topic and contents -->
-    <section class="section" id="front-end">
-        <!-- topic -->
-        <h3>Testing</h3>
+ 
         <!-- contents -->
-        <b>Testing strategy</b>
+        <h3>Testing strategy</h3>
         <p align="justify"> Unit Tests - We did this to ensure that the individual components of the program were functional. This increases confidence of each component working.
             <br>Integration Test - As the frontend and backend were formed in two seperate sections, we ran tests to ensure the connection between the two were running correctly.
             <br>User Tests - We conducted user tests to ensure that our interface was easy and efficient to use and understand.
-
+ 
         </p>
-        <b>Unit testing</b>
+        <h3>Unit testing</h3>
         <p align="justify">We conducted user tests in the following areas:<br>- Front to back tests <br>- Code matching tests<br>- UI tests<br>- Location testing<br>- Integration file testing<br>- Postgres database testing<br>- Read File tests<br>- Q&A model tests
             <br>Splitting the sections up into sections allows tests to be correctly made. This also allows for in-depth testing with the correct levels of coverage.
-
+            <br>Unit tests were introduced for the Backend Integration file through the Unit Testing file.
+            <br>By instantiating the files seperately allows us to feed them each custom data for unit testing. 
+            <br>Unit tests are used in testing the testable parts of the module, including the functions for extracting data from the files, filtering unecessary data, creating answers from the text obtained, returning these answers correctly, and ensuring that these answers are in suitable formats. 
+            <br>We ensured the tests compiled answers from the same documents as seen in the UnitTesting file, so that comparisons can be made between the known answers of these file, and the compiled tests by the program. 
         </p>
-        <b>Integration testing</b><br>
+        <h3>Integration testing</h3>
         <p align="justify"> Integration tests between the front and back end are necessary in covering all types of input and data sent between the UI interface from the user, and the correct answers/ outputs needed to be sent back to the UI from the backend files.
-
+            <br>Integration testing was conducted in the new_integ and fronttoback test files. The tests simulate information sent between the frontend and the backend components of the program. As they were both created independently, integration testing is very important to produce and display outputs most effectively.
         </p>
-        <b>User testing</b><br>
-        <p align="justify">
-
+        <h3>User testing</h3>
+        <p align="justify">We created user tests to ensure that our system was easy and efficient to use. We used 4 different people with no prior information about our project to ensure this.
+            <br>These are the tests that we used, with descriptions of what they are for and why they are needed:
+            <br><img src="assets/images/testing/testing1.png">
+            <br>These are the results of the tests showing how many were successfully completed by the users and how many attempts on average they took.
+            <img src="assets/images/testing/testing2.png">
+        </p>
+        <h3>Conclusions</h3>
+        <p align="justify">From the Unit Testing, we found a few bugs that were easily fixed, mainly in returning values. This allowed us to easily increase system coverage and the percentage success overall.
+            <br>From Integration Testing, we were able to find functions that we didn't need or that could be combined to increase code efficiency.
+            <br>From User Testing, we had clarity of how easy our program was to use and we concluded that it was, based on the success rate of the tests.
+ 
         </p>
         
     </section>
@@ -212,7 +228,7 @@
                         <div class="col-3"><a href="appendix.html">Appendix</a></div>
                     </div>
                 </div>
-
+ 
             </div>
         </div>
         <div class="sub-footer">
@@ -220,3 +236,5 @@
         </div>
     </footer>
 </body>
+ 
+ 
