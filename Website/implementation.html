@@ -256,6 +256,7 @@
             <div>
                 <p>
                     Then we run the QA model on it to extract the answers shown below. The questions are stored as a list in the class attributes, and all the answers are stored as a dictionary in the class attribute <span style="color: #0000a0">self.answers </span> 
+                </p>
                     <pre class="mycode"> 
                         <code>
                             def __init__(self, file):
@@ -273,7 +274,7 @@
                                 self.extract_ans()
                         </code>
                     </pre> 
-
+                <p>
                     The method that does the main extraction is the <span style="color: #ee2a24">extract_ans()</span> method shown below. It loops through the questions and stores it in <span style="color: #0000a0">self.answers </span> dictionary, with the question as the key and the answer as the value.
                     
 
@@ -305,6 +306,7 @@
             <div>
                 <p>
                     For extracting locations, we used the spaCy library. As seen in the <span style="color: #ee2a24">exctract_loc()</span> function below, first we load the spaCy model, stored in the 'nlp' variable. Then we make a container for the nlp library called 'doc', which takes in the text of the DREF document. This container contains all the annotations, labels and entities of the text. 
+                </p>
                     <pre class="mycode"> 
                         <code>
                             def __init__(self, file):
@@ -335,6 +337,7 @@
                                 return clean
                         </code>
                     </pre> 
+                <p>
                     The function gets all the entities labelled "GPE", standing for Geopolitical Entity, and places it in a temporary list 'locations'. We then make another list 'clean' which is thethe list of locations with exact match duplicates removed. This adjusted list is then saved to the<span style="color: #0000a0">self.locations</span> class attribute. 
                 </p>
             </div>
@@ -343,61 +346,52 @@
 
     <section class="section" id="code">
         <h4>Code Matching</h4>
-        <div class="image-bundle">
-            <img src="assets/images/implementation/technology/flask.png">
             <div>
                 <p>
                     We decided to use Fuzzy matching to compare extracted locations to the excel spreadsheet of Admins 0, 1 & 2 locations, thus finding the corresponding codes. We used the python library 'Pandas' to read from the excel sheets. This is done in the file called <span style="color: #ee2a24">exctract_loc()</span> 
-
-                    Process for finding ISO codes:
-                    1.) Filter excel sheet by first letter of Country extrcated by QA model
-                    2.) Try to find exact match 
-                    3.) If no exact match found, find the best match by comparing 'fuzz ratio', Which is the similarity score of our country, to the country names in the filtered excel sheet. The higher the score the more similar the words are. 
-                    <pre class="mycode"> 
-                        <code>
-                            
-                        </code>
-                    </pre> 
                 </p>
+                    <p>Process for finding ISO codes:</p>
+                    <p>1.) Filter excel sheet by first letter of Country extrcated by QA model</p>
+                    <p>2.) Try to find exact match </p>
+                    <p>3.) If no exact match found, find the best match by comparing 'fuzz ratio' </p>
+                    
+                    <p>The fuzz ratio is the similarity score between to strings. The higher the score the more similar the words are. </p>
+                    <b></b>
+                    <b></b>
+                    <p>The function find_p_code() returns a tuple(tag, p-code), where the tag is 0 if there is not match, 1 if the location is admin 1 and 2 if the location is admin 2</p>
+                    <pre class="mycode"> 
+                            <code>
+                                def __init__(self, admin_0, loc_list):
+                                    self.admin_0 = admin_0
+                                    # list of dict of pcodes for admin 1 & locations
+                                    self.loc_list = loc_list
+                                    self.ISO_code = self.getISOCode()
+                                    self.p_code_1 = []
+                                    self.p_code_2 = []
+                            </code>
+                        </pre> 
+            
+                        <pre class="mycode"> 
+                            <code>
+                                def loop_p_codes(self):
+                                    for loc in self.loc_list:
+                                        tag = self.find_p_code(loc)[0]
+                                        p_code = self.find_p_code(loc)[1]
+                                        dict = {"Location":loc, "P-Code":p_code}
+                                        if tag == 1:
+                                            self.p_code_1.append(dict)
+                                        if tag == 2:
+                                            self.p_code_2.append(dict)
+                            </code>
+                    </pre> 
+                
             </div>
-        </div>
     </section>
 
     <section class="section" id="display">
         <h4>Display and save</h4>
-        <div class="image-bundle">
-            <img src="assets/images/implementation/technology/flask.png">
-            <div>
-                <p>
-                    <pre class="mycode"> 
-                        <code>
-                            def __init__(self, admin_0, loc_list):
-                                self.admin_0 = admin_0
-                                # list of dict of pcodes for admin 1 & locations
-                                self.loc_list = loc_list
-                                self.ISO_code = self.getISOCode()
-                                self.p_code_1 = []
-                                self.p_code_2 = []
-                        </code>
-                    </pre> 
-                    
-
-                    <pre class="mycode"> 
-                        <code>
-                            def loop_p_codes(self):
-                                for loc in self.loc_list:
-                                    tag = self.find_p_code(loc)[0]
-                                    p_code = self.find_p_code(loc)[1]
-                                    dict = {"Location":loc, "P-Code":p_code}
-                                    if tag == 1:
-                                        self.p_code_1.append(dict)
-                                    if tag == 2:
-                                        self.p_code_2.append(dict)
-                        </code>
-                    </pre> 
-                </p>
-            </div>
-        </div>
+            <p> The communication between the backend and the UI is done in the file called <span style="color: #0000a0">fronttoback.py</span>. the function <span style="color: #ee2a24">exctract_answers()</span> runs the entire main function in <span style="color: #0000a0"> new_integ.py</span>, and stores it for displaying in the app.
+            </p>
     </section>
 
     <!-- TECHNOLOGIES -->
