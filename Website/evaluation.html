@@ -466,13 +466,14 @@
         <h3>Future Work</h3>
         <!-- contents -->
         <p>
-            Though our system meets all but 1 of our clients' requirements, there are still some improvements that could be made. One major improvement would be the retrieval time. Perhaps finding a quicker answering model, or using a better algorithm/data structure to find codes.
-            Another improvement would be to find a better QA model, or train the existing model. As evaluated above, the QA model has some shortcomings in terms of answer accuracy, which could definitely be improved.
+            Though our system meets all of our clients' requirements, there are still some improvements that could be made. One major improvement would be the retrieval time. This could be done by building upon the Fuzzy Matzhing that has already been done.
+            Another improvement would be to further train the existing QA model. As evaluated above, the QA model has some shortcomings in terms of answer accuracy, which could definitely be improved.
             <br>
             <br>
-            In terms of the user interface, the UI feedback could also be improved. For example on the screen where answers are displayed, currently, users have the ability to check answers and modify it, if any of them are incorrect. After modifying,
-            they can then save the correct answers to the database. Our suggested improvement would be to use a traffic light colour coding feedback system, based on hoe accurate the initial extracted answer is. That way users can correct the inaccurate ones.
-
+            We also believe a feedback loop could be implemented wherein users rate the accuracy of answers on the page where the answers are displayed. This would provide a continous stream of feedback which would help the QA model train itself as it keeps getting used.
+            <br>
+            <br>
+            While we have coded the Text Summarizer and the Image Slicing code needed to extract details about the Operational Strategy, it has not yet been integrated into the tool as our client expressed that they were not very interested in focusing on it now. This feature could be integrated into the tool in the future to increase functionality.
         </p>
     </section>
     <footer class="footer-content">
