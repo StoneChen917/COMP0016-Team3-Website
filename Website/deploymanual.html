@@ -5,27 +5,113 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deployment Manual</title>
+    <title>Evaluation</title>
 
     <link rel="stylesheet" href="assets/css/Global.css">
     <link rel="stylesheet" href="assets/css/Header.css">
     <link rel="stylesheet" href="assets/css/Footer.css">
 
     <link rel="stylesheet" href="assets/css/pages/index.css">
+
 </head>
+
+<style>
+    h1 {text-align: center;}
+    /*h2 {text-align: center;}*/
+    /*h3 {text-align: center;}*/
+    /*h4 {text-align: center;}*/
+    /*h5 {text-align: center;}*/
+
+
+    .styled-table {
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 0.9em;
+        font-family: sans-serif;
+        min-width: 400px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .styled-table thead tr {
+        background-color: #f06068;
+        color: #ffffff;
+        text-align: left;
+    }
+
+    .styled-table th,
+    .styled-table td {
+        padding: 12px 15px;
+    }
+
+    .styled-table tbody tr {
+        border-bottom: 1px solid #dddddd;
+    }
+
+    .styled-table tbody tr:nth-of-type(even) {
+        background-color: #f3f3f3;
+    }
+
+    .styled-table tbody tr:last-of-type {
+        border-bottom: 2px solid #f06068;
+    }
+
+    .styled-table tbody tr.active-row {
+        font-weight: bold;
+        color: #f06068;
+    }
+</style>
+<!-- <style>
+    .styled-table {
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 0.9em;
+        font-family: sans-serif;
+        min-width: 400px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .styled-table thead tr {
+        background-color: #f06068;
+        color: #ffffff;
+        text-align: left;
+    }
+
+    .styled-table th,
+    .styled-table td {
+        padding: 12px 15px;
+    }
+
+    .styled-table tbody tr {
+        border-bottom: 1px solid #dddddd;
+    }
+
+    .styled-table tbody tr:nth-of-type(even) {
+        background-color: #f3f3f3;
+    }
+
+    .styled-table tbody tr:last-of-type {
+        border-bottom: 2px solid #f06068;
+    }
+
+    .styled-table tbody tr.active-row {
+        font-weight: bold;
+        color: #f06068;
+    }
+</style> -->
 
 <body>
 
-    <section class="section" id="critical-evaluation">
+    <section class="section" id="Database deployment">
         <!-- topic -->
         <h3>Deployment Manual</h3>
         <h4>Database Deployment</h4>
         <!-- contents -->
         <h5>PostgreSQL</h5>
         <ol>
-            <li>Search and download pgAdmin</li>
-            <li>Set username and password</li>
-            <li>Deploy and connect to a server</li>
+                <li>Search and download pgAdmin</li>
+                <li>Set username and password</li>
+                <li>Deploy and connect to a server</li>
+
             <img src="assets/images/deploymanual/p1.png" alt="" class="large-size-image">
             <li>Check the Host name, Port, Username of the server</li>
             <img src="assets/images/deploymanual/p2.png" alt="" class="large-size-image">
@@ -40,4 +126,31 @@
             <img src="assets/images/deploymanual/command.png" alt="" class="large-size-image">
             <li>Start using the app</li>
         </ol>
+    </section>
+
+    <section>
+        <h4>Dependency Table</h4>
+
+        <table class="styled-table">
+            <thead>
+            <tr>
+                <th>Dependency</th><th>URL</th><th>License Type</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr><td>Tkinter</td><td>https://github.com/python/cpython/blob/3.11/Lib/tkinter/__init__.py</td><td>Python License</td></tr>
+            <tr><td>Pillow</td><td>https://github.com/python-pillow/Pillow</td><td>HPND License</td></tr>
+            <tr><td>Sentence-transformers</td><td>https://github.com/UKPLab/sentence-transformers</td><td>Apache License 2.0</td></tr>
+            <tr><td>Numpy</td><td>https://github.com/numpy/numpy</td><td>BSD License</td></tr>
+            <tr><td>Fuzzywuzzy</td><td>https://github.com/seatgeek/fuzzywuzzy</td><td>GNU General Public License v2</td></tr>
+            <tr><td>Transformers</td><td>https://github.com/huggingface/transformers</td><td>Apache-2.0 License</td></tr>
+            <tr><td>SpaCy</td><td>https://github.com/explosion/spaCy</td><td>MIT License</td></tr>
+            <tr><td>Psycopg2</td><td>https://github.com/psycopg/psycopg2</td><td>Lesser Public General License</td></tr>
+            <tr><td>Magic</td><td>https://github.com/ahupp/python-magic</td><td>MIT License</td></tr>
+            <tr><td>PyPDF2</td><td>https://github.com/py-pdf/pypdf</td><td>BSD License</td></tr>
+
+            </tbody>
+        </table>
+
+        
     </section>
