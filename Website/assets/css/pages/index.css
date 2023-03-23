@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 .landing-pages {
-    background-image: url(../../images/Background.jpg);
+    background-image: url(https://as1.ftcdn.net/v2/jpg/02/21/97/86/1000_F_221978639_EyPBA9tuscYhW6rhaO5EiVzdG8hvQSgV.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -8,9 +8,8 @@
 }
 
 .landing-pages .landing-background {
-    background-color: white;
+    background-color: rgba(253, 248, 248, 0.898);
 }
-
 .landing-pages h1 {
     line-height: 47px;
     font-weight: 400;
